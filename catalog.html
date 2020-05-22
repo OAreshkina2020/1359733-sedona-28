@@ -21,7 +21,26 @@
         </nav>
     </header>
     <main>
-        <!--Здесь будет форма для заполнения-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+                <legend>Инфраструктура:</legend>
+                <label><input type="checkbox" name="infrastructure" checked value="pool">Бассейн</label>
+                <label><input type="checkbox" name="infrastructure" value="parking">Парковка</label>
+                <label><input type="checkbox" name="infrastructure" value="wi-fi">wi-fi</label>
+            </fieldset>
+            <fieldset>
+                <legend>Тип жилья:</legend>
+                <label><input type="checkbox" name="housing" checked value="hotel">Гостиница</label>
+                <label><input type="checkbox" name="housing" checked value="motel">Мотель</label>
+                <label><input type="checkbox" name="housing" checked value="apartments">Апартаменты</label>
+            </fieldset>
+            <fieldset>
+                <legend>Стоимость в сутки (Р):</legend>
+                <label> от 0 <input type="range"></label>
+                <label> до 3000 <input type="range"></label>
+            </fieldset>
+            <button type="submit">Показать</button>
+        </form>    
         <section>
             <ul>
                 <li>
@@ -50,12 +69,12 @@
     </main>
     <footer>
         <section>
-            <h2>Как с нами связаться</h2>
+            <h2 class="visually-hidden">Как с нами связаться</h2>
             <p>#VISITSEDONA<br>
             ТЕЛ.:+7(495) 666-01-66</p>
         </section>
         <section>
-            <h2>Давайте дружить!</h2>
+            <h2 class="visually-hidden">Давайте дружить!</h2>
             <ul>
                 <li>
                     <a href="">Твиттер</a>
@@ -67,8 +86,8 @@
                     <a href="">ЮТуб</a>
                 </li>
             </ul>
-            <p>
-                Разработано
+            <p class="visually-hidden">
+                <h2 class="visually-hidden">Разработано</h2>
                 <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
             </p>
         </section>
