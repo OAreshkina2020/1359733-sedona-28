@@ -10,10 +10,10 @@
     <header>
         <nav>
             <a>
-                <img src="img/logo.png" alt="">Логотип CITY OF SEDONA
+                <img src="img/logo.png" alt="Логотип">Логотип CITY OF SEDONA
             </a>
             <a>
-                <img src="img/welcome.png" alt=""> Логотип большой SEDONA
+                <img src="img/welcome.png" alt="Большой логотип"> Логотип большой SEDONA
             </a>
             <ul>
                 <li><a href="blank.html">Информация</a></li>
@@ -35,7 +35,7 @@
                 </li>
             </ul>    
             <div>
-                <h2>Рекомендации</h2>
+                <h2 class="visually-hidden">Рекомендации</h2>
                 <ul>
                     <li>
                         <h3>Жилье</h3></p>
@@ -81,17 +81,17 @@
         </section>
         <section>
             <!--Здесь будет карта -->
-            <img src="img/map.png">
+            <img src="img/map.png" alt="карта местности">
         </section>
     </main>    
     <footer>
         <section>
-            <h2>Как с нами связаться</h2>
+            <h2 class="visually-hidden">Как с нами связаться</h2>
             <p>#VISITSEDONA<br>
             ТЕЛ.:+7(495) 666-01-66</p>
         </section>
         <section>
-            <h2>Давайте дружить!</h2>
+            <h2 class="visually-hidden">Давайте дружить!</h2>
             <ul>
                 <li>
                     <a href="#">Твиттер</a>
@@ -105,15 +105,34 @@
             </ul>
         </section>    
         <p>
-            <h2>Разработано</h2>
+            <h2 class="visually-hidden">Разработано</h2>
             <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </p>
         
     </footer>
     <section>
         <h2>Поиск гостиницы в Седоне</h2>
-        <!--Здесь будет форма для заполнения-->
-        <button type="button">НАЙТИ</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+            <p> 
+                <label for="arrival">Время заезда:</label>
+                <input type="text" name="arrival-time" id="arrival" placeholder="24 АПРЕЛЯ 2017">
+            </p>
+            <p>
+                <label for="depature">Время заезда:</label>
+                <input type="text" name="depature-time" id="depature" placeholder="4 ИЮЛЯ 2017">
+            </p>
+            <p>
+               <label for="number-of-adults"> Взрослые: </label>
+               <input type="number" name="adults" id="number-of-adults">
+            </p>
+            <p>
+                <label for="number-of-children"> Взрослые: </label>
+                <input type="number" name="children" id="number-of-children">
+            </p>
+            <button type="submit">Найти</button>
+        </form>
+        
+        
     </section>
     
 </body>
