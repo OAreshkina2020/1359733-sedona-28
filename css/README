@@ -1,8 +1,0 @@
-/*font-family: 'PT Sans', sans-serif;*/
-:root {
---basic-white: #ffffff;
---basic-grey: #eeeeee;
---basic-blue: #81D3D2;
---basic-brown: #766357;
---basic-light-grey: #f2f2f2;
-}
