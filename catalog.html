@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Поиск жилья "SEDONA". Гостиницы</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/normolize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">  
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <nav class="navigation">
             <a href="index.html" class="logo">
                 <img src="img/logo.png" alt="Логотип"> 
             </a>
-           
-            <ul>
-                <li><a href="blank.html">Информация</a></li>
-                <li><a href="blank.html">Фото и видео</a></li>
-                <li><a href="blank.html">Карьа штата</a></li>
-                <li><a href="hotels.html">Гостиницы</a></li>
-            </ul>
-
+           <div class="main-navigation">
+                <ul class="site-navigation">
+                    <li><a href="blank.html">Информация</a></li>
+                    <li><a href="blank.html">Фото и видео</a></li>
+                    <li><a href="blank.html">Карьа штата</a></li>
+                    <li><a href="hotels.html">Гостиницы</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -39,7 +42,7 @@
                 <label> от 0 <input type="range"></label>
                 <label> до 3000 <input type="range"></label>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button type="submit" class="button">Показать</button>
         </form>    
         <section class="catalog">
             <ul>
@@ -47,22 +50,22 @@
                     <img src="img/amara.jpg" alt="Фото AMARA RESORT & SPA">
                     <h2>AMARA RESORT & SPA</h2>
                     <p>мотель от 3000 руб</p>
-                    <button type="button">Подробнее</button>
-                    <button type="button">Забронировать</button>
+                    <button type="button" class="button">Подробнее</button>
+                    <button type="button" class="button">Забронировать</button>
                 </li>
                 <li>
                     <img src="img/desert.jpg" alt="Фото DESERT QUAIL INN">
                     <h2>DESERT QUAIL INN</h2>
                     <p>гостиница от 4000 руб</p>
-                    <button type="button">Подробнее</button>
-                    <button type="button">Забронировать</button>
+                    <button type="button" class="button">Подробнее</button>
+                    <button type="button" class="button">Забронировать</button>
                 </li> 
                 <li>
                     <img src="img/villas.jpg" alt="Фото VILLAS AT POCO DIABLO">
                     <h2>VILLAS AT POCO DIABLO</h2>
                     <p>апартаменты от 2000 руб</p>
-                    <button type="button">Подробнее</button>
-                    <button type="button">Забронировать</button>
+                    <button type="button" class="button">Подробнее</button>
+                    <button type="button" class="button">Забронировать</button>
                 </li>
             </ul>
         </section>
@@ -71,25 +74,34 @@
         <section class="contacts">
             <h2 class="visually-hidden">Как с нами связаться</h2>
             <p>#VISITSEDONA<br>
-            ТЕЛ.:+7(495) 666-01-66</p>
+            ТЕЛ.: +7(495) 666-01-66</p>
         </section>
         <section class="networks">
             <h2 class="visually-hidden">Давайте дружить!</h2>
-            <ul>
+            <ul class="networks-list">
                 <li>
-                    <a href="">Твиттер</a>
+                    <a href="#">
+                        <img src="img/twitter.svg"> 
+                    </a>
                 </li>
                 <li>
-                    <a href="">Фэйсбук</a>
+                    <a href="#">
+                        <img src="img/fb-icon.svg">
+                    </a>
                 </li>
                 <li>
-                    <a href="">ЮТуб</a>
-                </li>
+                    <a href="#">
+                        <img src="img/youtube.svg">
+                    </a>
+                </li>        
             </ul>
-            <p class="developers">
-                <h2 class="visually-hidden">Разработано</h2>
-                <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-            </p>
         </section>
+        <div class="developers">
+            <h2 class="visually-hidden">Разработано</h2>
+            <p class="website">website by</p>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <img src="img/logo-htmlacademy.svg" width="114px" height="40px">
+            </a>
+        </div>
     </footer>
 </body>    

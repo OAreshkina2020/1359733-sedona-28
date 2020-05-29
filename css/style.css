@@ -1,8 +1,8 @@
-/*font-family: 'PT Sans', sans-serif;*/
+
 :root {
 --basic-white: #ffffff;
 --basic-grey: #eeeeee;
---basic-blue: #81D3D2;
+--basic-blue: #81B3D2;
 --basic-brown: #766357;
 --basic-light-grey: #f2f2f2;
 --basic-grey-text: #333333;
@@ -24,36 +24,152 @@ body {
     background-position: top center;
     background-repeat: no-repeat;
 }
+
 a {
     text-decoration: none;
 }
+
 img {
-max-width: 100%;
-height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .navigation {
-font-size: 14px;
-line-height: 26px;
-color: var(--basic-black);
-background-color: transparent ;
-font-weight: 700;
+    line-height: 26px;
+    color: var(--basic-black);
+    background-color: transparent ;
+    font-weight: 700;
 }
+
 .main-navigation {
     background-color: var(--basic-white) ;
 }
+
 .site-navigation {
 list-style: none;
 }
+
 .site-navigation a {
 color: var(--basic-black);
+}
+
+.title,
+.reasons {
+    text-align: center;
+}
+
+.title {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.slogan {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-grey-text);
 }
 .reasons-list,
 .recommendations-list {
     list-style:none;
-    text-align: center;
 }
+
 .reasons h3 {
     font-size: 21px;
     line-height: 21px;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 21px;
+}
+.blue-fone {
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+}
+
+.grey-wrapper {
+    background-color: var(--basic-light-grey);
+}
+
+.grey-wrapper .text {
+    color: var(--basic-grey-text);
+}
+
+.travel-dates {
+    text-align: center;
+}
+.title-question {
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.travel-question .text {
+    color: var(--basic-grey-text);
+}
+
+.date-form h2 {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--basic-white);
+    background-color: var(--basic-brown);
+}
+
+.date-form label,
+.date-form input {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--basic-black);
+}
+
+.date-form input {
+  background-color: var(--basic-light-grey);
+  border: none;
+}
+
+.button {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--basic-blue);
+}
+/* надо определиться с цветом
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: ;
+} */
+
+.footer {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+
+}
+ 
+.networks-list {
+    list-style: none;
+    background-color: var(--basic-blue);
+}
+.footer a {
+    color: var(--basic-black);
+}
+
+.contacts p {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.website {
+    font-size: 14px;
+    line-height: 26px;
+}
+.visually-hidden {
+    display: none;
 }
