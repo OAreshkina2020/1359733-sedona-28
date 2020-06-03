@@ -2,10 +2,21 @@
 :root {
 --basic-white: #ffffff;
 --basic-grey: #eeeeee;
---basic-blue: #81B3D2;
---basic-brown: #766357;
---basic-light-grey: #f2f2f2;
+--basic-blue-quiet: #81B3D2;
+--basic-blue-hover: #669ec0;
+--basic-blue-focus: #5496bd;
+--basic-brown-quiet: #766357;
+--basic-brown-hover: #604e43;
+--basic-brown-focus: #503e33;
+--basic-grey-quiet: #f2f2f2;
+--basic-grey-hover: #ebebeb;
+--basic-grey-focus: #e5e5e5;
+--basic-grey-icon: #a9a9a9;
+--basic-grey-html: #bdbbbc;
+--basic-grey-triangle: #cacaca;
+--basic-grey-blocked: #6a6a6a;
 --basic-grey-text: #333333;
+--basic-grey-fone: #eeeeee;
 --basic-black: #000000;
 }
 
@@ -20,9 +31,9 @@ body {
     color: var(--basic-black);
     text-transform: uppercase;
     background-color: var(--basic-white);
-    background-image: url("img/background-photo.jpg");
+   /* background-image: url("../img/background-photo.jpg");
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 
 a {
@@ -46,13 +57,35 @@ img {
 }
 
 .site-navigation {
-list-style: none;
+    list-style: none;
 }
 
 .site-navigation a {
-color: var(--basic-black);
+    color: var(--basic-black);
 }
 
+.site-navigation a:hover {
+    color: var(--basic-blue-quiet);
+}
+
+.site-navigation a:focus {
+    color: var(--basic-black);
+    opacity: 30%;
+}
+
+.promo-foto {
+    background-image: url("../img/background-photo.jpg");
+    width: 1200px;
+    height: 509px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.big-logo {
+    padding-top: 76px;
+    position: center;
+}
 .title,
 .reasons {
     text-align: center;
@@ -84,11 +117,11 @@ color: var(--basic-black);
 }
 .blue-fone {
     color: var(--basic-white);
-    background-color: var(--basic-blue);
+    background-color: var(--basic-blue-quiet);
 }
 
 .grey-wrapper {
-    background-color: var(--basic-light-grey);
+    background-color: var(--basic-grey-fone);
 }
 
 .grey-wrapper .text {
@@ -107,12 +140,42 @@ color: var(--basic-black);
     color: var(--basic-grey-text);
 }
 
-.date-form h2 {
+/* кнопки , чекбоксы */
+.button {
+   font: inherit; 
+   text-align: center;
+   font-weight: 700;
+   text-transform: uppercase;
+   vertical-align: middle;
+   border: none;
+}
+
+.button-brown {
+    color: var(--basic-white);
+    background-color: var(--basic-brown-quiet);   
+}
+.date-form .button-brown {
     font-size: 21px;
     line-height: 26px;
-    text-align: center;
+}
+
+.catalog .button-brown {
+    font-size: 14px;
+    line-height: 21px;
+}
+.button-blue {
     color: var(--basic-white);
-    background-color: var(--basic-brown);
+    background-color: var(--basic-blue-quiet);
+}
+
+.date-form .button-blue {
+    font-size: 21px;
+    line-height: 26px;   
+}
+
+.catalog .button-blue {
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .date-form label,
@@ -124,38 +187,61 @@ color: var(--basic-black);
 }
 
 .date-form input {
-  background-color: var(--basic-light-grey);
-  border: none;
+    background-color: var(--basic-grey-quiet);   
 }
 
-.button {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
+.date-form input:hover {
+    background-color: var(--basic-grey-hover);
+}
+
+.date-form input:focus {
+    background-color: var(--basic-grey-focus);
+}
+
+.button-blue:hover {
+    background-color: var(--basic-blue-hover);
+}
+
+.button-blue:focus {
+    background-color: var(--basic-blue-focus);
+}
+
+.button-brown:hover {
+    background-color: var(--basic-brown-hover); 
+}
+
+.button-blue:focus {
+    background-color: var(--basic-blue-focus);
+}
+
+.check-form input {
+    background-color: var(--basic-blue-quiet);
     color: var(--basic-white);
-    vertical-align: middle;
-    text-transform: uppercase;
-    border: none;
-    background-color: var(--basic-blue);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
 }
-/* надо определиться с цветом
-.button:hover,
-.button:focus,
-.button:active {
-    background-color: ;
-} */
 
+/* футер*/
 .footer {
     color: var(--basic-black);
     background-color: var(--basic-white);
-
 }
  
 .networks-list {
     list-style: none;
-    background-color: var(--basic-blue);
+    background-color: var(--basic-blue-quiet);
+    text-align: center;
 }
+
+.social-button:hover {
+    background-color: var(--basic-blue-hover);
+}
+
+.social-button:focus {
+    background-color: var(--basic-blue-focus);
+}
+
 .footer a {
     color: var(--basic-black);
 }
@@ -172,4 +258,63 @@ color: var(--basic-black);
 }
 .visually-hidden {
     display: none;
+}
+
+/* результаты поиска*/
+.results {
+    background-color: var(--basic-white);
+}
+.found {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--basic-black) ;
+}
+
+.sorting {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--basic-black);
+}
+
+.sorting-type {
+    font: inherit;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    list-style: none;
+}
+
+.check-form {
+    background-image: url(../img/background2.jpg);
+    background-repeat: no-repeat;
+    font: inherit;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--basic-white);
+}
+.check-form input {
+    width: 27px;
+    height: 23px;
+    background: transparent;
+    border: 2px solid white;
+}
+
+/* каталог */
+.catalog h2 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.catalog p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--basic-grey-text);  
 }

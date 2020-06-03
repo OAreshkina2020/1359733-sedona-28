@@ -17,14 +17,27 @@
                 <ul class="site-navigation">
                     <li><a href="blank.html">Информация</a></li>
                     <li><a href="blank.html">Фото и видео</a></li>
-                    <li><a href="blank.html">Карьа штата</a></li>
+                    <li><a href="blank.html">Карта штата</a></li>
                     <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <section class="results">
+            <p class="found"> Найдено: 3</p>
+            <p class="sorting">Сортиировка:</p>
+            <ul class="sorting-type">
+                <li>По цене</li>
+                <li>По типу</li>
+                <li>По рейтингу</li>
+            </ul>
+            <div>
+                <img src="img/icon-up-dir.png" width="11px" height="10px">
+                <img src="img/icon-down-dir.png" width="11px" height="10px">
+            </div>
+        </section>
+        <form action="https://echo.htmlacademy.ru" method="get" class="check-form">
             <fieldset>
                 <legend>Инфраструктура:</legend>
                 <label><input type="checkbox" name="infrastructure" checked value="pool">Бассейн</label>
@@ -42,7 +55,7 @@
                 <label> от 0 <input type="range"></label>
                 <label> до 3000 <input type="range"></label>
             </fieldset>
-            <button type="submit" class="button">Показать</button>
+            <button type="submit" class="button button-transparent">Показать</button>
         </form>    
         <section class="catalog">
             <ul>
@@ -50,22 +63,22 @@
                     <img src="img/amara.jpg" alt="Фото AMARA RESORT & SPA">
                     <h2>AMARA RESORT & SPA</h2>
                     <p>мотель от 3000 руб</p>
-                    <button type="button" class="button">Подробнее</button>
-                    <button type="button" class="button">Забронировать</button>
+                    <button type="button" class="button button-blue">Подробнее</button>
+                    <button type="button" class="button button-brown">Забронировать</button>
                 </li>
                 <li>
                     <img src="img/desert.jpg" alt="Фото DESERT QUAIL INN">
                     <h2>DESERT QUAIL INN</h2>
                     <p>гостиница от 4000 руб</p>
-                    <button type="button" class="button">Подробнее</button>
-                    <button type="button" class="button">Забронировать</button>
+                    <button type="button" class="button button-blue">Подробнее</button>
+                    <button type="button" class="button button-brown">Забронировать</button>
                 </li> 
                 <li>
                     <img src="img/villas.jpg" alt="Фото VILLAS AT POCO DIABLO">
                     <h2>VILLAS AT POCO DIABLO</h2>
                     <p>апартаменты от 2000 руб</p>
-                    <button type="button" class="button">Подробнее</button>
-                    <button type="button" class="button">Забронировать</button>
+                    <button type="button" class="button button-blue">Подробнее</button>
+                    <button type="button" class="button button-brown">Забронировать</button>
                 </li>
             </ul>
         </section>
