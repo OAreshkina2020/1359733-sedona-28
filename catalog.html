@@ -24,19 +24,6 @@
         </nav>
     </header>
     <main>
-        <section class="results">
-            <p class="found"> Найдено: 3</p>
-            <p class="sorting">Сортиировка:</p>
-            <ul class="sorting-type">
-                <li>По цене</li>
-                <li>По типу</li>
-                <li>По рейтингу</li>
-            </ul>
-            <div>
-                <img src="img/icon-up-dir.png" width="11px" height="10px">
-                <img src="img/icon-down-dir.png" width="11px" height="10px">
-            </div>
-        </section>
         <form action="https://echo.htmlacademy.ru" method="get" class="check-form">
             <fieldset>
                 <legend>Инфраструктура:</legend>
@@ -50,15 +37,28 @@
                 <label><input type="checkbox" name="housing" checked value="motel">Мотель</label>
                 <label><input type="checkbox" name="housing" checked value="apartments">Апартаменты</label>
             </fieldset>
-            <fieldset>
-                <legend>Стоимость в сутки (Р):</legend>
+            <fieldset class="price">
+                <legend >Стоимость в сутки (Р):</legend>
                 <label> от 0 <input type="range"></label>
                 <label> до 3000 <input type="range"></label>
-            </fieldset>
-            <button type="submit" class="button button-transparent">Показать</button>
-        </form>    
+                <button type="submit" class="button button-transparent">Показать</button>
+            </fieldset>   
+        </form>  
+        <section class="results">
+            <p class="found"> Найдено: 3</p>
+            <p class="sorting">Сортиировка:</p>
+            <ul class="sorting-type">
+                <li>По цене</li>
+                <li>По типу</li>
+                <li>По рейтингу</li>
+            </ul>
+            <div>
+                <img src="img/icon-up-dir.png" width="11px" height="10px">
+                <img src="img/icon-down-dir.png" width="11px" height="10px">
+            </div>
+        </section>  
         <section class="catalog">
-            <ul>
+            <ul class="hotels-catalog ">
                 <li>
                     <img src="img/amara.jpg" alt="Фото AMARA RESORT & SPA">
                     <h2>AMARA RESORT & SPA</h2>
