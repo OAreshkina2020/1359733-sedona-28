@@ -55,6 +55,12 @@ img {
     align-content: start;
 }
 
+.body-wrapper {
+    width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+    margin-left: 10px;
+}
 /*Шапка*/
 /*Навигация*/
 
@@ -81,14 +87,7 @@ img {
     height: 70px;
     position: absolute;
     left: 531px;
-    top:-15px;
- 
-  
-}
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
+    top:-15px; 
 }
 
 .site-navigation li:nth-child(2) {
@@ -102,16 +101,19 @@ img {
 
 .site-navigation a {
     color: var(--basic-black);
-   
 }
 
 .site-navigation a:hover {
     color: var(--basic-blue-quiet);
 }
 
-.site-navigation a:focus {
+.site-navigation a:active {
     color: var(--basic-black);
     opacity: 30%;
+}
+
+.site-navigation a:focus {
+    color: var(--basic-brown-quiet);
 }
 
 .promo-foto {
@@ -181,7 +183,7 @@ img {
     align-items: center;
     text-align: center;
     list-style: none;
-    width: 1200px;
+
     min-height: 330px;
     margin:0;
     padding: 0;
@@ -244,6 +246,7 @@ img {
     padding-top: 56px;
     margin:0;
     text-align: center;
+    position: relative;
 }
 
 .title-question {
@@ -279,6 +282,8 @@ img {
 .date-form .button-brown {
     font-size: 21px;
     line-height: 26px;
+    width: 568px;
+    height: 86px;
 }
 
 .catalog .button-brown {
@@ -292,7 +297,9 @@ img {
 
 .date-form .button-blue {
     font-size: 21px;
-    line-height: 26px;   
+    line-height: 26px;
+    width: 458px;
+    height: 58px;   
 }
 
 .catalog .button-blue {
@@ -309,7 +316,22 @@ img {
 }
 
 .date-form input {
-    background-color: var(--basic-grey-quiet);   
+    background-color: var(--basic-grey-quiet);  
+    border:0;
+}
+
+.arrival,
+.depature {
+    width: 346px;
+    height: 38px;
+    padding-left: 12px;
+}
+
+.adults,
+.children {
+    width: 114px;
+    height: 38px;
+    text-align: center;
 }
 
 .date-form input:hover {
@@ -317,23 +339,27 @@ img {
 }
 
 .date-form input:focus {
-    background-color: var(--basic-grey-focus);
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-grey-focus);
 }
 
 .button-blue:hover {
     background-color: var(--basic-blue-hover);
 }
 
+.button-blue:active,
 .button-blue:focus {
-    background-color: var(--basic-blue-focus);
+    background: var(--basic-blue-focus);
+  
 }
 
 .button-brown:hover {
     background-color: var(--basic-brown-hover); 
 }
 
-.button-blue:focus {
-    background-color: var(--basic-blue-focus);
+.button-brown:active {
+    background-color: var(--basic-brown-focus);
+    color: var(--basic-white);
 }
 
 .check-form input {
@@ -352,8 +378,10 @@ img {
     flex-wrap: wrap;
     justify-content: space-around;
     color: var(--basic-black);
-    background-color: var(--basic-white);
-    
+    background-color:  rgba(255, 255, 255, 0.9);
+    /*position: absolute;
+    left: 40px;
+    top: 2642px;*/
 }
 
 .contacts{
@@ -386,6 +414,14 @@ img {
     margin-right: 8px;
 }
 
+.developers a:hover path {
+    fill: var(--basic-blue-quiet);
+}
+
+.developers a:active path {
+    fill: var(--basic-grey-html);
+}
+
 /* Кнопки*/
 
 .social-button {
@@ -403,10 +439,14 @@ img {
     background-color: var(--basic-blue-hover);
 }
 
-.social-button:focus {
+.social-button:focus,
+.social-button:active {
     background-color: var(--basic-blue-focus);
 }
-
+.social-button:focus path,
+.social-button:focus path {
+    opacity: 0.3;
+}
 .footer a {
     color: var(--basic-black);
 }
@@ -421,6 +461,7 @@ img {
     font-size: 14px;
     line-height: 26px;
 }
+
 .visually-hidden {
     display: none;
 }
@@ -431,14 +472,334 @@ img {
 }
 
 .button-brown {
-    width: 147px;
+    width: 142px;
     height: 27px;
+}
+
+
+
+/*Форма заезда*/
+.date-form .button-brown {
+    width: 568px;
+    height: 86px;
+}
+.date-form label {
+    display: block;
+}
+
+.label-arrival,
+.label-depature {
+    width:112px;
+    height: 32px;
+    padding-top:6px;
+}
+.label-adults {
+    width: 115px;
+    height: 32px;
+    padding-top:6px;
+    padding-left:0;
+}
+
+.label-children {
+    width: 62px;
+    height: 32px;
+    padding-top:6px;
+    padding-left: 53px;
+    text-align: center;
+}
+
+.arrival,
+.depature {
+   width: 340px;
+    height: 38px;
+
+}
+
+.adults,
+.children {
+    width: 114px;
+    height: 38px;
+}
+
+.input-form .button-blue {
+    width: 458px;
+    height: 58px;
+   margin-left: 55px;
+   margin-bottom: 55px;
+   margin-top: 25px;
+    
+}
+.date-form {
+    position: absolute;
+    left: 316px;
+    top: 2086px;
+    display: flex;
+    flex-direction: column;
+    width: 568px;
+    height: 481px;
+    background-color: var(--basic-white);
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    padding:0;
+ 
+}
+.input-form {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.input-form div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date-form p {
+    display: flex;
+    align-items: center;
+    
+}
+.date-form p:first-child {
+    margin-left: 55px;
+    margin-top: 55px;
+    margin-bottom: 30px;
+ 
+}
+
+.date-form p:nth-child(2),
+.date-form p:nth-child(3){
+    margin-left:55px;
+    margin-bottom:30px;
+    margin-top:0;
+}
+
+.date-form p:nth-child(4){
+margin-top:0;
+margin-left:0;
+margin-bottom:30px;
+
+}
+
+.input-form p:first-child {
+    position: relative;
+}
+
+.input-form input::-webkit-input-placeholder {
+    color: var(--basic-black);
+}
+
+.arrival::after {
+    content: "";
+    position: absolute;
+    top: 839px;
+    left: 2231px
+    width: 21px;
+    height: 23px;
+    background-image: url(../img/calendar.svg)
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+/* Форма в каталоге*/
+.check-form legend {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    display: block;
+    text-align: start; 
+}
+
+.infrastructure-form legend {
+    width: 137px;
+    height: 21px;
+    outline: 5px solid rgba(5, 23, 126, 0.747);
+    outline-offset: -5px;
+}
+
+.housing-form legend {
+    width: 137px;
+    height: 21px;
+    outline: 5px solid rgba(5, 23, 126, 0.747);
+    outline-offset: -5px;
+}
+
+.price legend{
+    width: 318px;
+    height: 21px;
+    outline: 5px solid rgba(5, 23, 126, 0.747);
+    outline-offset: -5px;    
+}
+
+.check-form {
+    background-image: url(../img/background2.jpg);
+    width: 1056px;
+    min-height: 158px;
+    background-repeat: no-repeat;
+    font: inherit;
+    color: var(--basic-white);
+    display: flex;
+    flex-wrap: wrap; 
+    padding-left: 73px;
+    padding-right: 73px;
+    padding-top: 27px;
+    padding-bottom: 32px;
+}
+.check-form fieldset {
+    outline: 5px solid rgba(0, 0, 255, 0.3);
+    outline-offset: -5px;
+    margin: 0;
+    padding:0;
+    border:0;
+    display: grid; 
+}
+
+.check-form .infrastructure-form,
+.check-form .housing-form {
+    width: 137px;
+}
+
+.check-form .infrastructure-form {
+    margin-right: 119px;
+}
+.check-form fieldset:nth-child(3) {
+    width: 317px;
+    margin-left: 345px;
+}
+.infrastructure-form label {
+    position: relative;
+}
+
+
+.check {
+padding-left: 16px;
+}
+
+.check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.check-box {
+    position: absolute;
+    background-image: url(../img/checkbox-on.svg);
+}
+
+/* Цена*/
+.price-filter {
+    width: 317px;
+    margin-top: 11px; 
+}
+
+.price-controls {
+    display: flex;
+    position: relative;
+}
+.price-controls .price-min,
+.price-controls .price-max {
+    width: 158px;
+    height: 36px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.price input::-webkit-input-placeholder{
+    color: var(--basic-white);
+}
+
+.price-controls .price-min {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 60px;
+}
+
+.price-controls .price-max {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 50px;
+}
+
+/*.price-min::after {
+    content:"";
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    background-image: url(../img/Rectangle.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}*/
+
+
+.range-controls {
+    margin-top: 20px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: var(--basic-white);
+    opacity: 0.3;
+}
+.range-controls .bar {
+    width: 78%;
+    height: 2px;
+    background: var(--basic-blue-focus);
+}
+.range-controls {
+    position: relative;
+    margin-bottom: 33px;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: -11px;
+    width: 4px;
+    height: 4px;
+    padding:0;
+    border: 8px solid var(--basic-white);
+    background-color: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #ababab;
+}
+
+.range-controls .toggle-max {
+    left: 248px;
+}
+
+.button-transparent {
+    width: 137px;
+    height: 36px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--basic-white);
+    margin: auto;
+}
+
+.button-transparent:hover {
+    background-color: var(--basic-white);
+    color: var(--basic-black);
 }
 /* результаты поиска*/
 .results {
     background-color: var(--basic-white);
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1200px;
+    height: 86px; 
 }
 .found {
+    margin-left: 73px;
+    margin-right: 46px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -450,122 +811,83 @@ img {
     line-height: 18px;
     font-weight: 400;
     color: var(--basic-black);
-}
-
-
-/* Форма*/
-
-.catalog li {
-    width: 1200px;
-    border: 2px solid var(--basic-grey-focus);
-   
-  
-}
-
-
-.check-form {
-    background-image: url(../img/background2.jpg);
-    width: 1200px;
-    height: 217px;
-    background-repeat: no-repeat;
-    font: inherit;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    color: var(--basic-white);
-    display: flex;
-    flex-wrap: wrap; 
-    padding-left: 73px;
-    padding-right: 73px;
-    padding-top: 27px;
-}
-
-.infrastructure-form {
-
-}
-
-.housing-form {
-    
-}
-
-.price {
-    
-}
-.check-form fieldset {
-    border:0;
-    display: flex;
-    flex-direction: column;   
-}
-
-.infrastructure-form label {
-    display: block;
-    text-align: center;
-}
-.check-form input {
-    width: 27px;
-    height: 23px;
-    background: transparent;
-    border: 4px solid white;
-}
-
-/* результаты*/
-.results {
-    outline: 5px solid rgba(0, 0, 255, 0.3);
-    outline-offset: -5px;
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    
-    width: 1200px;
-    height: 86px; 
+    margin-right: 40px;
 }
 
 .triangles {
-   
-    outline: 5px solid rgba(0, 200, 255, 0.3);
-    outline-offset: -5px;
     margin-left: 471px;
 } 
 .triangles img:first-child {
     margin-right: 12px;
 } 
-.found {
-    margin-left: 73px;
-    margin-right: 46px;
-    outline: 5px solid rgba(0, 0, 220, 0.3);
-    outline-offset: -5px;
-}
 
-.sorting {
-    margin-right: 40px;
-    outline: 5px solid rgba(0, 100, 255, 0.3);
-    outline-offset: -5px;
-}
 .sorting-type {
-    outline: 5px solid rgba(100, 0, 255, 0.3);
-    outline-offset: -5px;
     list-style: none;
     padding: 0;
     margin:0;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-    display: flex;
-    
-   
+    display: flex;  
 }
 
-.sorting-type li {
+.sorting-type a {
     margin-right: 32px;
+    color: var(--basic-black);
+    opacity: 0.3;
+    border-bottom: 1px dashed var(--basic-blue-quiet);
 }
+
+.sorting-type a:hover {
+    color: var(--basic-blue-quiet);
+    opacity: 1;
+    border-bottom: 1px dashed var(--basic-blue-quiet);
+}
+
+.sorting-type a:focus {
+    color: var(--basic-black);
+    opacity: 1;
+}
+
+.sorting-type a:active {
+    color: var(--basic-blue-quiet);
+    opacity: 1;
+}
+
+
 /* каталог */
+.catalog li {
+    width: 1200px;
+    border: 2px solid var(--basic-grey-focus);
+    border-left: none;
+    border-right: none;
+}
+
+.catalog li:nth-child(2){
+    border-top: none;
+    border-bottom: none;
+}
 .catalog h2 {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--basic-black);
+    width: 240px;
+    height: 26px;
+    margin:0;   
+}
+
+.catalog a {
+    color:var(--basic-black);
+}
+
+.catalog a:hover {
+    color:var(--basic-blue-quiet);
+}
+
+.catalog a:active {
+    color:var(--basic-black);
+    opacity:0.3;
 }
 
 .catalog p {
@@ -579,17 +901,13 @@ img {
     list-style: none;
     padding: 0;
     margin:0;
-    min-height: 150px;
-
-    
+    min-height: 150px;    
 }
 
 .hotels-catalog li {
     width: 1200px;
     display: flex;
     align-items: center;
-   
-
 }
 
 .hotels-catalog img {
@@ -603,7 +921,7 @@ img {
 
 .hotels-catalog div:nth-child(2) {
     width: 268px;
-    height: 90px;
+    height: 97px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -612,21 +930,21 @@ img {
     display: block;
 }
 
-.description h2 {
-   width: 240px;
-   height: 26px;
-   margin:0;
-}
-
 .description p:nth-child(2) {
     width: 110px;
     margin:0;
     margin-right: 6px;
+    margin-bottom: 16px;
+    margin-top: 7px;
+    margin-bottom: 15px;
 }
 
 .description p:nth-child(3) {
-    width: 96px;
+    width: 142px;
+    height: 21px;
     margin:0;
+    margin-top: 7px;
+    margin-bottom: 15px;
 }
  
 .rating {
@@ -634,6 +952,7 @@ img {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    height: 95px;
     margin-left: 522px;
 }
 
@@ -642,6 +961,9 @@ img {
     display: block;
     width: 110px;
     height: 27px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
     background-color: var(--basic-grey-quiet);
     margin:0;
     margin-top: 47px; 
