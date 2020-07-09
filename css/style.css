@@ -59,7 +59,7 @@ img {
     width: 1200px;
     background-color: #ffffff;
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-    margin-left: 10px;
+    margin: 0 auto;
 }
 /*Шапка*/
 /*Навигация*/
@@ -87,12 +87,13 @@ img {
     height: 70px;
     position: absolute;
     left: 531px;
-    top:-15px; 
+    top:-15px;
+    z-index: 2; 
 }
 
 .site-navigation li:nth-child(2) {
     margin-left: 134px;
-    margin-right: 418px;
+    margin-right: 417px;
 }
 
 .site-navigation li:nth-child(3) {
@@ -122,6 +123,19 @@ img {
     height: 509px;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.promo-foto::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/frame.svg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    width: 1200px;
+    height: 57px;
+    top: 452px;
+    left:0;
     
 }
 
@@ -129,7 +143,7 @@ img {
     margin-top: 75px;
     margin-left: 360px;
     margin-bottom: 90px;
-   
+   z-index: 2;
 }
 
 /*Причины*/
@@ -156,6 +170,8 @@ img {
     color: var(--basic-grey-text);
 }
 .reasons-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin:0;
     padding:0;
@@ -214,8 +230,9 @@ img {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: -1;;
-   }
+    grid-row-end: -1;
+}
+
 .grey-wrapper {
     width: 1200px;
 }
@@ -256,6 +273,8 @@ img {
 }
 
 .travel-dates .text {
+    display: block;
+    margin-bottom: 36px;
     font-size: 14px;
     line-height: 24px;
     color: var(--basic-grey-text);
@@ -265,6 +284,7 @@ img {
     margin: 0;
     padding: 0;
 }
+
 /* кнопки , чекбоксы */
 .button {
    font: inherit; 
@@ -290,6 +310,7 @@ img {
     font-size: 14px;
     line-height: 21px;
 }
+
 .button-blue {
     color: var(--basic-white);
     background-color: var(--basic-blue-quiet);
@@ -302,7 +323,7 @@ img {
     height: 58px;   
 }
 
-.catalog .button-blue {
+.catalog .e {
     font-size: 14px;
     line-height: 21px;
 }
@@ -350,16 +371,17 @@ img {
 .button-blue:active,
 .button-blue:focus {
     background: var(--basic-blue-focus);
-  
+    color: rgba(255, 255, 255, 0.3)
 }
 
 .button-brown:hover {
     background-color: var(--basic-brown-hover); 
 }
 
-.button-brown:active {
+.button-brown:active,
+.button-brown:focus {
     background-color: var(--basic-brown-focus);
-    color: var(--basic-white);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .check-form input {
@@ -379,11 +401,11 @@ img {
     justify-content: space-around;
     color: var(--basic-black);
     background-color:  rgba(255, 255, 255, 0.9);
-    /*position: absolute;
-    left: 40px;
-    top: 2642px;*/
 }
-
+.main-footer {
+    position: absolute;
+    top: 2642px;
+}
 .contacts{
     text-align: center;
     margin: auto;
@@ -489,21 +511,22 @@ img {
 
 .label-arrival,
 .label-depature {
-    width:112px;
+    width: 112px;
     height: 32px;
-    padding-top:6px;
+    padding-top: 6px;
 }
 .label-adults {
-    width: 115px;
+    width: 107px;
     height: 32px;
-    padding-top:6px;
-    padding-left:0;
+    padding-top: 6px;
+    padding-left: 7px;
+    text-align: start;
 }
 
 .label-children {
     width: 62px;
     height: 32px;
-    padding-top:6px;
+    padding-top: 6px;
     padding-left: 53px;
     text-align: center;
 }
@@ -515,12 +538,6 @@ img {
 
 }
 
-.adults,
-.children {
-    width: 114px;
-    height: 38px;
-}
-
 .input-form .button-blue {
     width: 458px;
     height: 58px;
@@ -530,22 +547,21 @@ img {
     
 }
 .date-form {
-    position: absolute;
-    left: 316px;
-    top: 2086px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     width: 568px;
     height: 481px;
     background-color: var(--basic-white);
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-    padding:0;
- 
+    padding: 0;
+    
 }
 .input-form {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     margin: 0;
+    position: relative;
 }
 
 .input-form div {
@@ -555,9 +571,9 @@ img {
 
 .date-form p {
     display: flex;
-    align-items: center;
-    
+    align-items: center;   
 }
+
 .date-form p:first-child {
     margin-left: 55px;
     margin-top: 55px;
@@ -567,36 +583,103 @@ img {
 
 .date-form p:nth-child(2),
 .date-form p:nth-child(3){
-    margin-left:55px;
-    margin-bottom:30px;
+    margin-left: 55px;
+    margin-bottom: 30px;
     margin-top:0;
 }
 
 .date-form p:nth-child(4){
-margin-top:0;
-margin-left:0;
-margin-bottom:30px;
-
-}
-
-.input-form p:first-child {
-    position: relative;
+    margin-top:0;
+    margin-left:0;
+    margin-bottom:30px;
 }
 
 .input-form input::-webkit-input-placeholder {
     color: var(--basic-black);
 }
 
-.arrival::after {
-    content: "";
-    position: absolute;
-    top: 839px;
-    left: 2231px
-    width: 21px;
+.form-block {
+    position: relative;
+}
+
+.calendar-1 {
+    width:21px;
     height: 23px;
-    background-image: url(../img/calendar.svg)
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    position: absolute;
+    left: 490px;
+    top: 62px;
+}
+
+.calendar-2 {
+    width:21px;
+    height: 23px;
+    position: absolute;
+    left: 490px;
+    top: 132px;
+}
+
+ .form-block p:hover  path {
+    fill: var(--basic-black);
+}
+
+.form-block p:focus path {
+    fill: var(--basic-blue-quiet);
+}
+
+.form-block p:nth-child(4){
+    position: relative;
+}
+
+.form-block .minus-1 {
+    position: absolute;
+    width: 12px;
+    height: 3px;
+   top: 201px;
+   left: 185px;
+}
+
+.form-block .minus-2 {
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    top: 5px;
+    left: 130px;
+}
+
+.form-block .union-1 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 205px;
+    left: 255px;
+}
+
+.form-block .union-2 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 9px;
+    left: 200px;
+}
+
+.form-block .minus-1:hover rect,
+.form-block .union-1:hover  path {
+    fill: var(--basic-black);
+}
+
+.form-block .minus-1:active rect,
+.form-block .union-1:active  path {
+    fill: var(--basic-blue-quiet);
+}
+
+.form-block .minus-2:hover rect,
+.form-block .union-2:hover  path {
+    fill: var(--basic-black);
+}
+
+.form-block .minus-2:active rect,
+.form-block .union-2:active  path {
+    fill: var(--basic-blue-quiet);
 }
 
 /* Форма в каталоге*/
@@ -608,25 +691,15 @@ margin-bottom:30px;
     text-align: start; 
 }
 
-.infrastructure-form legend {
-    width: 137px;
-    height: 21px;
-    outline: 5px solid rgba(5, 23, 126, 0.747);
-    outline-offset: -5px;
-}
-
+.infrastructure-form legend,
 .housing-form legend {
     width: 137px;
     height: 21px;
-    outline: 5px solid rgba(5, 23, 126, 0.747);
-    outline-offset: -5px;
 }
 
 .price legend{
     width: 318px;
-    height: 21px;
-    outline: 5px solid rgba(5, 23, 126, 0.747);
-    outline-offset: -5px;    
+    height: 21px;  
 }
 
 .check-form {
@@ -643,45 +716,67 @@ margin-bottom:30px;
     padding-top: 27px;
     padding-bottom: 32px;
 }
+
 .check-form fieldset {
-    outline: 5px solid rgba(0, 0, 255, 0.3);
-    outline-offset: -5px;
     margin: 0;
     padding:0;
     border:0;
     display: grid; 
+
 }
 
 .check-form .infrastructure-form,
 .check-form .housing-form {
     width: 137px;
+    min-height: 21px;
 }
 
 .check-form .infrastructure-form {
     margin-right: 119px;
 }
+
 .check-form fieldset:nth-child(3) {
     width: 317px;
     margin-left: 345px;
 }
-.infrastructure-form label {
-    position: relative;
-}
-
 
 .check {
-padding-left: 16px;
+    padding-top: 24px;
+    padding-left: 35px;
+    position: relative;
 }
 
 .check-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    position: absolute;
 }
+
 
 .check-box {
     position: absolute;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    top: 22px;
+    left: 0;
+    z-index: 2;
+}
+
+.check-input:checked + .check-box{
     background-image: url(../img/checkbox-on.svg);
+    width: 27px;
+}
+
+.check-input:disabled + .check-box{
+    background-image: url(../img/checkbox-off-disabled.svg);
+    width: 23px;
+}
+
+.check-input:checked:disabled + .check-box{
+    background-image: url(../img/checkbox-on-disabled.svg);
+    width: 27px;
 }
 
 /* Цена*/
@@ -694,6 +789,19 @@ padding-left: 16px;
     display: flex;
     position: relative;
 }
+
+.price-controls::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/Rectangle.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 2px;
+    height: 22px;
+    top: 7px;
+    left: 156px;
+}
+
 .price-controls .price-min,
 .price-controls .price-max {
     width: 158px;
@@ -726,16 +834,6 @@ padding-left: 16px;
     padding-left: 50px;
 }
 
-/*.price-min::after {
-    content:"";
-    position: absolute;
-    left: 50px;
-    top: 25px;
-    background-image: url(../img/Rectangle.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}*/
-
 
 .range-controls {
     margin-top: 20px;
@@ -743,14 +841,16 @@ padding-left: 16px;
 
 .range-controls .scale {
     height: 2px;
-    background: var(--basic-white);
-    opacity: 0.3;
+    background: rgb(250, 248, 248, 0.3);
+   
 }
+
 .range-controls .bar {
     width: 78%;
     height: 2px;
-    background: var(--basic-blue-focus);
+    background: var(--basic-white);
 }
+
 .range-controls {
     position: relative;
     margin-bottom: 33px;
@@ -772,6 +872,10 @@ padding-left: 16px;
     left: 248px;
 }
 
+.range-controls .toggle:hover {
+    border: 10px solid var(--basic-white);
+}
+
 .button-transparent {
     width: 137px;
     height: 36px;
@@ -787,6 +891,7 @@ padding-left: 16px;
     background-color: var(--basic-white);
     color: var(--basic-black);
 }
+
 /* результаты поиска*/
 .results {
     background-color: var(--basic-white);
@@ -797,6 +902,7 @@ padding-left: 16px;
     width: 1200px;
     height: 86px; 
 }
+
 .found {
     margin-left: 73px;
     margin-right: 46px;
@@ -817,9 +923,22 @@ padding-left: 16px;
 .triangles {
     margin-left: 471px;
 } 
-.triangles img:first-child {
+
+.up {
     margin-right: 12px;
 } 
+
+.up:hover path,
+.down:hover path {
+    fill: var(--basic-black);
+}
+
+.up:focus path,
+.up:active path,
+.down:focus path,
+.down:active path {
+    fill: var(--basic-blue-quiet);
+}
 
 .sorting-type {
     list-style: none;
@@ -867,6 +986,7 @@ padding-left: 16px;
     border-top: none;
     border-bottom: none;
 }
+
 .catalog h2 {
     font-size: 21px;
     line-height: 26px;
@@ -965,6 +1085,6 @@ padding-left: 16px;
     line-height: 21px;
     font-weight: normal;
     background-color: var(--basic-grey-quiet);
-    margin:0;
+    margin: 0;
     margin-top: 47px; 
 }

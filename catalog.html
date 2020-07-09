@@ -5,7 +5,7 @@
   <title>Поиск жилья "SEDONA". Гостиницы</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normolize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">  
+  <link href="css/style.min.css" rel="stylesheet">  
 </head>
 <body class="page-body">
     <div class="body-wrapper">
@@ -30,19 +30,18 @@
                     <legend>Инфраструктура:</legend>
                     <label class="check">
                         <input class="check-input" type="checkbox" name="infrastructure" checked value="pool">
-                        <span class="chek-box">
-                        
+                        <span class="check-box">
                         </span>
                         Бассейн
                     </label>
                     <label class="check">
                         <input class="check-input" type="checkbox" name="infrastructure" value="parking">
-                        <span class="chek-box"></span>
+                        <span class="check-box"></span>
                         Парковка
                     </label>
                     <label class="check">
                         <input class="check-input" type="checkbox" name="infrastructure" value="wi-fi">
-                        <span class="chek-box"></span>
+                        <span class="check-box"></span>
                         wi-fi
                     </label>
                 </fieldset>
@@ -50,17 +49,17 @@
                     <legend>Тип жилья:</legend>
                     <label class="check">
                         <input class="check-input" type="checkbox" name="housing" checked value="hotel">
-                        <span class="chek-box"></span>
+                        <span class="check-box"></span>
                         Гостиница
                     </label>
                     <label class="check">
                         <input class="check-input" type="checkbox" name="housing" checked value="motel">
-                        <span class="chek-box"></span>
+                        <span class="check-box"></span>
                         Мотель
                     </label>
                     <label class="check">
                         <input class="check-input" type="checkbox" name="housing" checked value="apartments">
-                        <span class="chek-box"></span>
+                        <span class="check-box"></span>
                         Апартаменты
                     </label>
                 </fieldset>
@@ -91,8 +90,16 @@
                     <li><a href="blank.html">По рейтингу</a></li>
                 </ul>
                 <div class="triangles">
-                    <img src="img/icon-up-dir.png" width="11px" height="10px">
-                    <img src="img/icon-down-dir.png" width="11px" height="10px">
+                    <span class="up">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                        </svg> 
+                    </span>
+                    <span class="down">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
+                        </svg>
+                    </span>
                 </div>
             </section>  
             <section class="catalog">
