@@ -91,6 +91,7 @@ img {
     z-index: 2; 
 }
 
+
 .site-navigation li:nth-child(2) {
     margin-left: 134px;
     margin-right: 417px;
@@ -103,6 +104,11 @@ img {
 .site-navigation a {
     color: var(--basic-black);
 }
+
+.focus-page a {
+    color: var(--basic-brown-quiet);
+}
+
 
 .site-navigation a:hover {
     color: var(--basic-blue-quiet);
@@ -551,17 +557,35 @@ img {
     display: flex;
     flex-direction: column;
     width: 568px;
-    height: 481px;
-    background-color: var(--basic-white);
-    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-    padding: 0;
-    
+    margin-top: -8px;
 }
+
 .input-form {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     position: relative;
+    width: 568px;
+    height: 395px;
+    background-color: var(--basic-white);
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    padding: 0;
+    animation-name: form-down;
+    animation-duration: 1.5s ;
+}
+ 
+
+@keyframes form-down {
+    0%  {height: 0px;}
+    100% {height:395;}
+}
+
+.appointment-form-box {
+    display: none;
+}
+
+.appointment-form-show {
+    display: flex;
 }
 
 .input-form div {
@@ -1088,3 +1112,7 @@ img {
     margin: 0;
     margin-top: 47px; 
 }
+
+
+
+

@@ -5,7 +5,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normolize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">  
+  <link href="css/style.css" rel="stylesheet">  
 </head>
 <body class="page-body"> 
     <div class="body-wrapper">
@@ -102,12 +102,12 @@
                 <h2 class="title-question">Заинтересовались?</h2>
                 <p class="text">Укажите предпологаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                 <div class="date-form">
-                    <button type="button" class="button button-brown"> Поиск гостиницы в Седоне</button>
-                    <form action="https://echo.htmlacademy.ru" method="post" class="input-form">
+                    <button type="button" class="button button-brown appointment-button"> Поиск гостиницы в Седоне</button>
+                    <form action="https://echo.htmlacademy.ru" method="post" class="input-form appointment-form-box">
                         <div class="form-block"> 
                             <p> 
                                 <label class="label-arrival" for="arrival">Дата заезда:</label>
-                                <input type="text" name="arrival-time" id="arrival" placeholder="24 АПРЕЛЯ 2017" class="arrival">
+                                <input type="text" name="arrival-time" id="arrival" placeholder="24 АПРЕЛЯ 2017" class="arrival" required>
                                 <span class="calendar-1">
                                     <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9"/>
@@ -117,7 +117,7 @@
                             </p>
                             <p>
                                 <label class="label-depature" for="depature">Дата выезда:</label>
-                                <input type="text" name="depature-time" id="depature" placeholder="4 ИЮЛЯ 2017" class="depature">
+                                <input type="text" name="depature-time" id="depature" placeholder="4 ИЮЛЯ 2017" class="depature" required>
                                 <span class="calendar-2">
                                     <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9"/>
@@ -127,7 +127,7 @@
                             </p>
                             <p>
                                 <label class="label-adults" for="number-of-adults"> Взрослые: </label>
-                                <input type="number" name="adults" id="number-of-adults" min="1" step="1" placeholder="2" class="adults">
+                                <input type="number" name="adults-form" id="number-of-adults" min="1" step="1" placeholder="2" class="adults" required>
                                 <span class="minus minus-1">
                                     <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="12" height="3" fill="#A9A9A9"/>
@@ -141,7 +141,7 @@
                             </p>
                             <p>
                                 <label class="label-children" for="number-of-children"> Дети: </label>
-                                <input type="number" name="children" id="number-of-children" min="0" step="1" placeholder="0" class="children">
+                                <input type="number" name="children-form" id="number-of-children" min="0" step="1" placeholder="0" class="children" required>
                                 <span class="minus minus-2">
                                     <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="12" height="3" fill="#A9A9A9"/>
@@ -160,7 +160,10 @@
             </section>
             <section class="map">
                 <h2 class="visually-hidden"> Карта местности</h2>
-                <img src="img/map.png" alt="карта местности" width="1200" height="594">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209620.35522925534!2d-111.85058553820272!3d34.82309506146615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da1560b274a87%3A0xc133eeb0c9f176b3!2z0KLQu9Cw0LrQtdC_0LDQuiDQkNGA0YLRgSAmINCo0L7Qv9C40L3QsyDQktC40LvQu9C40LTQtg!5e0!3m2!1sru!2sru!4v1594729442818!5m2!1sru!2sru" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p>
+                    <img src="img/map.png" alt="карта местности" width="1200" height="594">
+                </p>
             </section>
         </main>    
         <footer class="footer main-footer">
@@ -209,4 +212,27 @@
             </div>
         </footer>
     </div>
+
+    <script>
+
+        var appointmentButton = document.querySelector(".appointment-button");
+        var appointmentFormBox = document.querySelector(".appointment-form-box");
+
+        appointmentButton.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            appointmentFormBox.classList.toggle("appointment-form-show");
+            arrival.focus();
+        });
+
+        window.addEventListener("keydown", function (evt) {
+            if(evt.keycode === 27) {
+            if(appointmentFormBox.classList.contains("appointment-form-show")){
+            evt.preventDefault();
+            appointmentFormBox.classList.remove("appointment-form-show");
+            }
+            }
+        });
+    </script>
+
 </body>
+</html>
