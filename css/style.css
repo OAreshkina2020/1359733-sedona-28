@@ -595,7 +595,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 568px;
-    margin-top: -8px;
+    margin-top: -10px;
 }
 
 .input-form {
@@ -697,8 +697,8 @@ img {
     position: absolute;
     width: 12px;
     height: 3px;
-   top: 201px;
-   left: 185px;
+    top: 203px;
+    left: 185px;
 }
 
 .form-block .minus-2 {
@@ -713,7 +713,7 @@ img {
     position: absolute;
     width: 11px;
     height: 11px;
-    top: 205px;
+    top: 207px;
     left: 255px;
 }
 
@@ -856,7 +856,7 @@ img {
 .price-controls::before {
     position: absolute;
     content: "";
-    background-image: url(../img/Rectangle.svg);
+    background-image: url(../img/rectangle.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     width: 2px;
