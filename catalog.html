@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Поиск жилья "SEDONA". Гостиницы</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="css/normolize.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">  
 </head>
 <body class="page-body">
@@ -67,8 +67,10 @@
                     <legend >Стоимость в сутки (Р): </legend>
                     <div class="price-filter">
                         <div class="price-controls">
-                            <input type="number" name="min-price" class="price-min" placeholder="от 0">
-                            <input type="number" name="max-price" class="price-max" placeholder="до 3000">
+                            <label class="visually-hidden" for="min">От</label>
+                            <input type="number" name="min-price" class="price-min" placeholder="от 0" id="min">
+                            <label class="visually-hidden" for="max">До</label>
+                            <input type="number" name="max-price" class="price-max" placeholder="до 3000" id="max">
                         </div>
                         <div class="range-controls">
                             <div class="scale">
@@ -184,7 +186,8 @@
             <section class="contacts">
                 <h2 class="visually-hidden">Как с нами связаться</h2>
                 <p>#VISITSEDONA<br>
-            ТЕЛ.: +7(495) 666-01-66</p>
+                    <a href:"tel:+7(495)6660166">ТЕЛ.: +7(495) 666-01-66</a>
+                </p>
             </section>
             <section class="networks">
                 <h2 class="visually-hidden">Давайте дружить!</h2>
