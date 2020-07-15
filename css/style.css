@@ -855,7 +855,7 @@ img {
 .price-controls::before {
     position: absolute;
     content: "";
-    background-image: url(../img/rectangle.svg);
+    background-image: url(../img/rect.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     width: 2px;
